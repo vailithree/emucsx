@@ -16,8 +16,14 @@ The Constellation Sirius X series, also called CSX, is the primary computer that
 It was the upper-mid-range "pro-sumer" computer from Vail. EmuCSX emulates the X2250 and X2500 in particular,
 both coming out in 2001.
 
+## Spectrum ISA
+\<to be done later>
+
 ## Setting up
 ### Installation
 To help the performance of the emulator, binaries are not made.
 You must use build.py to properly build EmuCSX.
-The emulator needs to run very fast - it uses extreme optimizations and builds around your processor's extensions, which differ from system to system.
+The emulator needs to run very fast - it uses extreme optimizations and builds around your processor's extensions, which differs from system to system.
+
+### ROM
+ROMs will be located in bin/redai/.
