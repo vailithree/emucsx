@@ -1,5 +1,5 @@
 #import "@preview/gentle-clues:1.3.1": *
-#set text(font: "Roboto", size: 15pt)
+#set text(font: "Roboto", size: 15pt, hyphenate: true)
 #show title: set text(size: 40pt)
 #show heading.where(level: 1): set text(size: 25pt)
 #show heading.where(level: 2): set text(size: 20pt)
@@ -51,7 +51,23 @@
   
   table.hline(stroke: 1pt + black),
   
-  // Content Rows
-  // Example: [Aug 2016], [11], [Made formatting changes for better readability.], [39, 40, 41],
+  // content rows
+  // example: [Aug 2016], [11], [Made formatting changes for better readability.], [39, 40, 41],
   table.hline(stroke: 1pt + black)
 )
+
+#pagebreak()
+#align(center + horizon)[
+	#text(weight: "bold")[Page intentionally left blank]
+]
+#pagebreak()
+#align(center + horizon)[
+	#text(weight: "bold")[Page intentionally left blank]
+]
+#pagebreak()
+= _Architectural Overview_
+#pad(x: 5%)[
+	#block(width: 100%)[
+    
+  ]
+]

@@ -26,4 +26,4 @@ You must use build.py to properly build EmuCSX.
 The emulator needs to run very fast - it uses extreme optimizations and builds around your processor's extensions, which differs from system to system.
 
 ### ROM
-ROMs will be located in bin/redai/.
+ROMs will be located in bin/redox/.
