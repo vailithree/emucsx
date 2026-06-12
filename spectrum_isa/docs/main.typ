@@ -1,29 +1,57 @@
-#import "@preview/bytefield:0.0.8": *
+#import "@preview/gentle-clues:1.3.1": *
+#set text(font: "Roboto", size: 15pt)
+#show title: set text(size: 40pt)
+#show heading.where(level: 1): set text(size: 25pt)
+#show heading.where(level: 2): set text(size: 20pt)
+#show heading.where(level: 3): set text(size: 16pt)
 
-#align(center)[#bytefield(
-  bitheader(16, 15, 12, 8, 0),
-  bitbox(1, fill: rgb("#BAFFC9"))[Enable],
-  bitbox(3, fill: rgb("#BAE1FF"))[Timer Mode],
-  bitbox(4, fill: rgb("#FFFFBA"))[Prescaler],
-  bitbox(8)[Reserved],
-)]
+#grid(
+	columns: (1fr, 1fr),
+	align(center)[
+		#image("vail_branding/vailLogo.svg", width: 70%)
+	],
+	align(center)[
+		#image("vail_branding/spectrumLogo.svg", width: 70%)
+	]
+)
+#linebreak()
+#linebreak()
+#align(center)[
+	#title[
+		VAIL Spectrum ISA
+	]
+]
 
-#align(center)[#bytefield(
-  bitheader(16, 0),
-  bitbox(16, fill: rgb("#FFB3BA"))[Compare Top],
-)]
+#pagebreak()
+#set page(
+  footer: context {
+    let i = counter(page).get().first()
+    align(center)[#i]
+	align(center)[VAIL Spectrum Specifications]
+  }
+)
+#counter(page).update(1)
 
-#align(center)[#bytefield(
-  bitheader(16, 15, 14, 8, 0),
-  bitbox(1, fill: rgb("#FFB3BA"))[Error Flag],
-  bitbox(1, fill: rgb("#BAFFC9"))[Ready Flag],
-  bitbox(6)[Reserved],
-  bitbox(8)[State Code],
-)]
+// table of contents begin
+#outline(title: [_Table of Contents_])
+// table of contents end
 
-#align(center)[#bytefield(
-  bitheader(10, 2, 1, 0),
-  bitbox(8, fill: rgb("#BAE1FF"))[Data Payload],
-  bitbox(1, fill: rgb("#EAEAEA"))[Parity],
-  bitbox(1, fill: rgb("#FFB3BA"))[Stop Bit],
-)]
+#pagebreak()
+
+= _Revision History_
+#table(
+  columns: (auto, auto, 1fr, auto),
+  stroke: (x, y) => (
+    bottom: if y > 0 { 0.5pt + gray } else { none }
+  ),
+
+  table.hline(stroke: 0.5pt + black),
+  
+  table.header([Date], [Revision \#], [Description], [Page]),
+  
+  table.hline(stroke: 1pt + black),
+  
+  // Content Rows
+  // Example: [Aug 2016], [11], [Made formatting changes for better readability.], [39, 40, 41],
+  table.hline(stroke: 1pt + black)
+)
