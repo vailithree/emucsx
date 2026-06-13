@@ -26,4 +26,6 @@ You must use build.py to properly build EmuCSX.
 The emulator needs to run very fast - it uses extreme optimizations and builds around your processor's extensions, which differs from system to system.
 
 ### ROM
-ROMs will be located in bin/redox/.
+ROMs will be located in bin/redox/. Redox is the codename for the ROM of the Constellation Sirius X line.
+However, you may use any file as ROM for EmuCSX - ROM is explicitly always placed at 0x00, so it is the first thing executed by
+the CPU, and therefore you may create your own ROMs with an assembler or other method to get a raw binary file.
